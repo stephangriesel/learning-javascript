@@ -1,0 +1,37 @@
+High order functions:
+
+ - functions that accept other functions (debugger, setTimeout, forEach)
+ - enhance the behaviour of other functions
+ 
+ Examples:
+ 
+ 1.
+ 
+ runWithDebugger (function() { // runWithDebugger is the high order function
+ 	for (var = i; i < 10; i++) { // the rest of the code is the callback function
+ 		console.log(i);
+ 		}
+ 	});
+ 	
+ 2.	
+ setTimeout(function() { // setTimeout is the high order function
+	console.log("Wake Up Stephan!"); // the "function..." is the callback function
+
+}, 5000)
+
+  3.
+  var students = ["jon", "jenny", "elliot"];
+  
+  forEach(students, function(student) { // forEach is the high order function
+	console.log(student); //the function is the callback function
+  })
+  
+  4.
+  descriptionElement.addEventListener("click", function(event) { // addEventListener is the high order function
+	console.log(event); // the function is the call back function
+	console.log("The description element was clicked!!");
+	});
+ 
+ Callback functions:
+ 
+  - functions that are passed into higher order functions (
